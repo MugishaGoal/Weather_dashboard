@@ -2,11 +2,12 @@ async function getWeather() {
     const city = document.getElementById('cityInput').value;
     if (city) {
         try {
-            const response = await fetch(`/api/weather?city=${city}`);
+            const response = await fetch(`http://localhost:3000/api/weather?city=${city}`);
+
             const weatherData = await response.json();
             displayWeather(weatherData);
         } catch (error) {
-            console.error('Error fetching weather data:', error);
+            displayWeatherError("Error displaying data");
         }
     }
 }
@@ -24,4 +25,9 @@ function displayWeather(data) {
     } else {
         weatherInfo.innerHTML = '<p>Error fetching weather data. Please try again.</p>';
     }
+}
+
+function displayWeatherError(error) {
+    const weatherInfo = document.getElementById('weatherInfo');
+        weatherInfo.innerHTML = `<p>${error}</p>`;
 }

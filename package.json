@@ -4,8 +4,9 @@
   "description": "Weather_dashboard App",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec babel-node src/index.js",
+    "start": "node --require @babel/preset-env build/index.js",
+    "build": "babel -d ./build ./src -s"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.6",
     "@babel/core": "^7.24.6",
     "@babel/node": "^7.24.6",
     "@babel/preset-env": "^7.24.6",

@@ -2,7 +2,10 @@ async function getWeather() {
     const city = document.getElementById('cityInput').value;
     if (city) {
         try {
-            const response = await fetch(`http://localhost:3000/api/weather?city=${city}`);
+            const weatherInfo = document.getElementById('weatherInfo');
+            weatherInfo.innerHTML = `<p></p>`;
+
+            const response = await fetch(`/.netlify/functions/weather?city=${city}`);
 
             const weatherData = await response.json();
             displayWeather(weatherData);

@@ -2,9 +2,11 @@ Weather Dashboard
 This project is a simple weather dashboard application built using Node.js for the backend and plain HTML, CSS, and JavaScript for the frontend. The application fetches weather data from the OpenWeatherMap API and displays it to the user based on their input city.
 
 Features
-Fetches real-time weather data for any city using the OpenWeatherMap API.
-Displays weather information including temperature, humidity, wind speed, and weather description.
-Simple and responsive UI.
+
+-Fetches real-time weather data for any city using the OpenWeatherMap API.
+-Displays weather information including temperature, humidity, wind speed, and weather description.
+-Simple and responsive UI.
+
 Technologies Used
 Node.js
 Express.js
@@ -21,32 +23,23 @@ An API key from OpenWeatherMap. You can get one by signing up on their website.
 Steps
 Clone the repository
 
-bash
-Copy code
 git clone https://github.com/MugishaGoal/weather-dashboard.git
 cd weather-dashboard
 Install dependencies
 
-bash
-Copy code
 npm install
 Create a .env file in the root directory and add your OpenWeatherMap API key
 
-env
-Copy code
 OPENWEATHER_API_KEY=your_api_key_here
 Run the server
 
-bash
-Copy code
 node index.js
 Open index.html
 
 You can use a live server extension in VS Code or any other method to serve the index.html file and test the application in your browser.
 
 Project Structure
-bash
-Copy code
+
 weather-dashboard/
 │
 ├── client/
